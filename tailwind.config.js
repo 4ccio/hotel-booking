@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+import formsPlugin from "@tailwindcss/forms";
+
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
@@ -7,7 +9,13 @@ export default {
         roboto: ["Roboto", "sans-serif"],
         nunito: ["Nunito", "sans-serif"],
       },
+      backgroundImage: {
+        "form-bg": "url('/src/assets/water.jpg')",
+      },
     },
   },
-  plugins: [],
+  plugins: [
+    formsPlugin,
+    // ...
+  ],
 };
