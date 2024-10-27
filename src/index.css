@@ -6,5 +6,5 @@
 @tailwind utilities;
 
 body {
-  @apply font-roboto;
+  @apply h-lvh font-roboto;
 }

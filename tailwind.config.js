@@ -10,7 +10,7 @@ export default {
         nunito: ["Nunito", "sans-serif"],
       },
       backgroundImage: {
-        "form-bg": "url('/src/assets/water.jpg')",
+        "form-bg": "url('/src/assets/street.jpg')",
       },
     },
   },
