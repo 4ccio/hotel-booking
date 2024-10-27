@@ -37,10 +37,10 @@ const NavBar = () => {
                   <img
                     src={item.icon}
                     alt="favorite"
-                    className="h-6 w-auto sm:h-7"
+                    className="h-6 w-auto sm:h-6"
                   />
                   {item.name ? (
-                    <span className="font-nunito hidden text-lg font-bold sm:block">
+                    <span className="hidden font-nunito text-base font-semibold sm:block">
                       {item.name}
                     </span>
                   ) : null}

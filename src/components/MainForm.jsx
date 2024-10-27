@@ -1,38 +1,44 @@
 const MainForm = () => {
   return (
     <div className="container mx-auto px-8">
-      <div className="">
+      <div className="flex justify-center">
         <form>
-          <div className="grid grid-cols-2 gap-3 lg:grid-cols-4">
-            <label className="col-span-2 block lg:col-span-1">
-              <span>Место назначения</span>
-              <input
-                className="block w-full lg:max-w-64"
-                placeholder="Город или страна"
-              ></input>
-            </label>
-            <label>
-              <span>Заезд</span>
-              <input className="block w-full" type="date"></input>
-            </label>
-            <label>
-              <span>Выезд</span>
-              <input className="block w-full" type="date"></input>
-            </label>
-            <label className="col-span-2 lg:col-span-1">
-              <span>Гости</span>
-              <input className="block w-full" type="number"></input>
-            </label>
+          <div className="grid max-w-4xl grid-cols-2 gap-3 lg:grid-cols-12">
+            <div className="col-span-2 block lg:col-span-4">
+              <label>
+                <span>Место назначения</span>
+                <input
+                  className="w-full"
+                  placeholder="Город или страна"
+                ></input>
+              </label>
+            </div>
+            <div className="lg:col-span-2">
+              <label>
+                <span>Заезд</span>
+                <input className="w-full" type="date"></input>
+              </label>
+            </div>
+            <div className="lg:col-span-2">
+              <label>
+                <span>Выезд</span>
+                <input className="w-full" type="date"></input>
+              </label>
+            </div>
+            <div className="col-span-1 block lg:col-span-2">
+              <label>
+                <span>Гости</span>
+                <input className="w-full" type="number" min="0"></input>
+              </label>
+            </div>
+            <div className="col-span-1 flex flex-grow items-end lg:col-span-2">
+              <button className="w-full rounded-lg bg-teal-600 p-3">
+                Найти
+              </button>
+            </div>
           </div>
         </form>
       </div>
-
-      {/* <div className="bg-form-bg h-96 w-auto bg-cover bg-no-repeat">
-        <form>
-          <input>
-          </input>
-        </form>
-      </div> */}
     </div>
   );
 };
