@@ -21,7 +21,7 @@ const items = [
 
 const NavBar = () => {
   return (
-    <nav className="flex items-center justify-between bg-zinc-100 px-3 py-3 sm:justify-around">
+    <nav className="flex items-center justify-between px-3 py-3 sm:justify-around">
       <div>
         <a href="/" className="flex items-center">
           <img src={logo} alt="logo" className="mr-1 h-9 w-auto sm:h-12"></img>

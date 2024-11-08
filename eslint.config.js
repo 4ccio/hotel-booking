@@ -34,6 +34,7 @@ export default [
         "warn",
         { allowConstantExport: true },
       ],
+      "react/prop-types": "off", // TODO: use TypeScript next time
     },
   },
   eslintConfigPrettier,

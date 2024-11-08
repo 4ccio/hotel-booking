@@ -1,48 +1,81 @@
 const MainForm = () => {
   return (
+    // TODO: переделать форму через map()
     <form>
-      <div className="grid max-w-4xl grid-cols-2 gap-3 font-nunito lg:grid-cols-12">
-        <div className="col-span-2 lg:col-span-4">
-          <div className="relative w-full">
+      <div className="grid max-w-5xl grid-cols-6 gap-5 font-nunito xl:max-w-7xl xl:grid-cols-12">
+        <div className="col-span-6 xl:col-span-3">
+          <div>
+            <label htmlFor="destination" className="ml-2.5">
+              <span className="text-white">Место назначения</span>
+            </label>
+            <input
+              id="destination"
+              placeholder="Город или страна"
+              className="w-full rounded-lg border-[3px] border-transparent bg-white/60 py-3 placeholder-zinc-700 backdrop-blur-sm focus:border-zinc-700 focus:bg-white/75 focus:ring-0"
+              type="text"
+            ></input>
+          </div>
+          {/* <div className="relative w-full">
             <input
               type="text"
               id="destination"
               placeholder=" "
-              className="peer w-full rounded-lg border-0 bg-inherit p-4 pt-6 text-lg placeholder-transparent backdrop-blur-xl focus:ring-0"
+              className="peer w-full rounded-lg border-0 bg-inherit p-4 pt-6 text-lg placeholder-transparent backdrop-blur-xl focus:border-none focus:ring-0"
             />
             <label
               htmlFor="destination"
-              className="peer-focus:text-md absolute left-4 top-3 text-gray-200 duration-200 peer-placeholder-shown:top-5 peer-placeholder-shown:text-lg peer-focus:left-3 peer-focus:top-[-0.6rem]"
+              className="absolute left-4 top-3 cursor-text text-gray-400 duration-200 peer-placeholder-shown:top-5 peer-placeholder-shown:text-lg peer-focus:left-4 peer-focus:top-[-1.6rem] peer-focus:z-10 peer-focus:bg-transparent peer-focus:text-base peer-focus:text-gray-100"
             >
               Город или страна
             </label>
-            {/* <div className="absolute left-0 top-3 w-full border-t-2 border-transparent transition-all duration-200 peer-focus:border-[#18ffff]"></div> */}
-          </div>
+          </div> */}
         </div>
-        <div className="lg:col-span-2">
-          <label>
-            <span>Заезд</span>
-            <input className="w-full py-3 text-lg" type="date"></input>
-          </label>
-        </div>
-        <div className="lg:col-span-2">
-          <label>
-            <span>Выезд</span>
-            <input className="w-full py-3 text-lg" type="date"></input>
-          </label>
-        </div>
-        <div className="col-span-1 block lg:col-span-2">
-          <label>
-            <span>Гости</span>
+        <div className="col-span-3 xl:col-span-2">
+          <label htmlFor="checkin" className="ml-2.5">
+            <span className="text-white">Заезд</span>
             <input
-              className="w-full py-3 text-lg"
-              type="number"
-              min="1"
+              id="checkin"
+              className="w-full rounded-lg border-[3px] border-transparent bg-white/60 py-3 placeholder-zinc-700 backdrop-blur-sm focus:border-zinc-700 focus:bg-white/75 focus:ring-0"
+              type="date"
             ></input>
           </label>
         </div>
-        <div className="col-span-1 flex flex-grow items-end lg:col-span-2">
-          <button className="w-full rounded-lg bg-teal-600 p-3">Найти</button>
+        <div className="col-span-3 xl:col-span-2">
+          <label htmlFor="checkout" className="ml-2.5">
+            <span className="text-white">Выезд</span>
+          </label>
+          <input
+            id="checkout"
+            className="w-full rounded-lg border-[3px] border-transparent bg-white/60 py-3 placeholder-zinc-700 backdrop-blur-sm focus:border-zinc-700 focus:bg-white/75 focus:ring-0"
+            type="date"
+          ></input>
+        </div>
+        <div className="col-span-3 block xl:col-span-2">
+          <label htmlFor="guests" className="ml-2.5">
+            <span className="text-white">Гости</span>
+          </label>
+          <input
+            id="guests"
+            className="w-full rounded-lg border-[3px] border-transparent bg-white/60 py-3 placeholder-zinc-700 backdrop-blur-sm focus:border-zinc-700 focus:bg-white/75 focus:ring-0"
+            type="number"
+            min="1"
+            placeholder="Взрослые"
+          ></input>
+        </div>
+        <div className="col-span-3 block xl:col-span-2">
+          <label htmlFor="guests" className="ml-2.5">
+            <span className="text-white">Гости</span>
+          </label>
+          <input
+            id="guests"
+            className="w-full rounded-lg border-[3px] border-transparent bg-white/60 py-3 placeholder-zinc-700 backdrop-blur-sm focus:border-zinc-700 focus:bg-white/75 focus:ring-0"
+            type="number"
+            min="1"
+            placeholder="Дети"
+          ></input>
+        </div>
+        <div className="col-span-6 flex flex-grow items-end xl:col-span-1">
+          <button className="w-full rounded-lg bg-zinc-300 py-4">Найти</button>
         </div>
       </div>
     </form>
