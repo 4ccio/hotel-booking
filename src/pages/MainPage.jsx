@@ -11,16 +11,15 @@ const MainPage = () => {
   const [initialLimit, setInitialLimit] = useState(
     setInitialCardsNumber(width),
   );
-  const [setVisibleCards, setVisibleCardssetVisibleCards] =
-    useState(initialLimit);
+  const [visibleCards, setVisibleCards] = useState(initialLimit);
 
   useEffect(() => {
     setInitialLimit(() => setInitialCardsNumber(width));
-    // setVisibleCardssetVisibleCards(() => setInitialCardsNumber(width)); // change initialy visible cards before button clicked if user changed screen,
+    // setVisibleCards(() => setInitialCardsNumber(width)); // change initialy visible cards before button clicked if user changed screen,
   }, [width]);
 
   const showMoreCards = () => {
-    setVisibleCardssetVisibleCards((prevCount) => prevCount + initialLimit);
+    setVisibleCards((prevCount) => prevCount + initialLimit);
   };
 
   return (
@@ -39,7 +38,7 @@ const MainPage = () => {
             </h2>
           </div>
           <div className="grid grid-cols-1 items-center justify-items-center gap-6 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4">
-            {destinations.slice(0, setVisibleCards).map((item, index) => {
+            {destinations.slice(0, visibleCards).map((item, index) => {
               return (
                 <div
                   className="w-full max-w-96 rounded-lg shadow-md shadow-slate-200 transition duration-300 hover:-translate-y-0.5 hover:shadow-md hover:shadow-slate-300"
@@ -55,13 +54,16 @@ const MainPage = () => {
               );
             })}
           </div>
-          <div className="mt-4 flex justify-center">
+
+          <div className="mt-5 flex items-center justify-center gap-3">
+            <div className="w-full border-b-2 border-zinc-300"></div>
             <button
               onClick={showMoreCards}
-              className="rounded-md bg-blue-500 px-4 py-2 text-white hover:bg-blue-600"
+              className="w-full max-w-52 text-nowrap rounded-md border-2 border-solid border-zinc-500 bg-transparent px-4 py-2 text-zinc-900 transition-colors duration-200 hover:border-zinc-600 hover:bg-zinc-200"
             >
-              Show More
+              Показать ещё
             </button>
+            <div className="w-full border-b-2 border-zinc-300"></div>
           </div>
         </div>
       </section>
