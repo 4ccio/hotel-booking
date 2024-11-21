@@ -1,6 +1,6 @@
 const DestinationCard = ({ imgUrl, city, country, price }) => {
   return (
-    <div className="h-48 max-w-96">
+    <div className="h-full">
       <div
         className={`h-full rounded-md bg-cover bg-center`}
         style={{ backgroundImage: `url(${imgUrl})` }}
