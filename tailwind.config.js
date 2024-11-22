@@ -23,7 +23,8 @@ export default {
       backgroundImage: {
         "form-bg": "url('/src/assets/street.jpg')",
         "search-btn": "url('/src/assets/search.svg')",
-        "moscow": "url('/src/assets/moscow.svg')"
+        moscow: "url('/src/assets/moscow.svg')",
+        article: "url('/src/assets/lake.jpg')",
       },
     },
   },
