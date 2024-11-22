@@ -2,7 +2,7 @@ const MainForm = () => {
   return (
     // TODO: переделать форму через map(), вынести input в отдельный компонент
     <form>
-      <div className="grid max-w-5xl grid-cols-6 gap-5 font-nunito xl:max-w-7xl xl:grid-cols-12">
+      <div className="grid max-w-5xl grid-cols-6 gap-5 font-nunito xl:max-w-full xl:grid-cols-12">
         <div className="col-span-6 xl:col-span-3">
           <div>
             <label htmlFor="destination" className="ml-2.5">

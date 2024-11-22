@@ -33,8 +33,9 @@ const MainPage = () => {
   return (
     <>
       <NavBar></NavBar>
-      <section className="mb-5 h-[480px] bg-form-bg bg-cover bg-center bg-no-repeat lg:h-[550px]">
-        <div className="flex h-full items-center justify-center bg-black/30 px-6 py-6 backdrop-blur-sm">
+      <section className="relative mb-5 h-[480px] bg-form-bg bg-cover bg-center bg-no-repeat lg:h-[550px]">
+        <div className="absolute inset-0 bg-black/30 backdrop-blur-sm"></div>
+        <div className="container relative mx-auto flex h-full w-full items-center justify-center">
           <MainForm></MainForm>
         </div>
       </section>
