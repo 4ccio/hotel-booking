@@ -7,6 +7,7 @@ import setInitialCardsNumber from "../helpers/setVisibleItemsByScreenWidth";
 import { DESTINATIONS as destinations } from "../config/destintaions";
 import H2 from "../components/H2";
 import Article from "../components/Article";
+import Footer from "../components/Footer";
 
 const MainPage = () => {
   const { width } = useScreenSize(); // получаем текущую ширину экрана
@@ -86,7 +87,7 @@ const MainPage = () => {
           </div>
         </div>
       </section>
-      <section>
+      <section className="mb-5">
         <div className="max-auto container w-full">
           <div className="mb-3">
             {/* <h2 className="text-center text-lg font-medium sm:text-left lg:text-xl">
@@ -94,19 +95,20 @@ const MainPage = () => {
             </h2> */}
             <H2>Вдохновитесь на свою следующую поездку</H2>
           </div>
-          <div className="grid justify-items-center gap-6 md:grid-cols-[repeat(2,_minmax(0,_24rem))] md:place-content-between xl:grid-cols-[repeat(3,_minmax(0,_24rem))]">
-            <div className="h-64 w-full max-w-96">
+          <div className="grid grid-cols-[repeat(1,_minmax(0,_25rem))] place-content-center gap-6 md:grid-cols-[repeat(2,_minmax(0,_25rem))] md:place-content-between lg:grid-cols-[repeat(3,_minmax(0,_25rem))]">
+            <div className="h-64 w-full">
               <Article></Article>
             </div>
-            <div className="h-64 w-full max-w-96">
+            <div className="h-64 w-full">
               <Article></Article>
             </div>
-            <div className="h-64 w-full max-w-96">
+            <div className="h-64 w-full">
               <Article></Article>
             </div>
           </div>
         </div>
       </section>
+      <Footer></Footer>
     </>
   );
 };
