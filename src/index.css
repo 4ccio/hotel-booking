@@ -8,3 +8,9 @@
 body {
   @apply h-lvh bg-zinc-100 font-roboto;
 }
+
+@layer components {
+  .main-form-input {
+    @apply w-full rounded-lg border-2 border-zinc-700 bg-white/60 py-3 placeholder-zinc-700 backdrop-blur-sm focus:bg-white/75 focus:ring-0;
+  }
+}

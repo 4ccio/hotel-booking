@@ -1,5 +1,5 @@
-import { BREAKPOINTS as bp } from "../config/screenBreakpoints";
-import { CARDS_TO_SHOW as cards } from "../config/destinationCadsToShow";
+import { BREAKPOINTS as bp } from "@/shared/screenBreakpoints.js";
+import { CARDS_TO_SHOW as cards } from "./destinationCadsToShow";
 
 export default function setItems(width) {
   if (width < bp.sm) {

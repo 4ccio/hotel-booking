@@ -1,54 +1,5 @@
-import logo from "../assets/logo.svg";
-
-const items = [
-  {
-    header: "Компания",
-    children: [
-      {
-        name: "О нас",
-        link: "/",
-      },
-      {
-        name: "Контакты",
-        link: "/",
-      },
-      {
-        name: "Правовая информация",
-        link: "/",
-      },
-    ],
-  },
-  {
-    header: "Бизнесу",
-    children: [
-      {
-        name: "Отельерам",
-        link: "/",
-      },
-      {
-        name: "Партнёрам",
-        link: "/",
-      },
-      {
-        name: "Рекламодателям",
-        link: "/",
-      },
-    ],
-  },
-  {
-    header: "Помощь",
-    children: [
-      {
-        name: "FAQ",
-        link: "/",
-      },
-      {
-        name: "Поддержка",
-        link: "/",
-      },
-    ],
-  },
-];
+import { items } from "./footerItems";
+import logo from "@/assets/logo.svg";
 
 const Footer = () => {
   return (
@@ -64,9 +15,9 @@ const Footer = () => {
               ></img>
               <span className="text-xl font-bold lg:text-2xl">myHotel</span>
             </a>
-            <div className="max-w-fit font-nunito font-semibold">
+            <p className="max-w-fit font-nunito font-semibold">
               Ваш верный спутник в путешествиях!
-            </div>
+            </p>
           </div>
           {items.map((item, index) => {
             return (

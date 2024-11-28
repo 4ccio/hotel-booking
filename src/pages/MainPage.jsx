@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react";
-import useScreenSize from "../hooks/useScreenSize";
-import DestinationCard from "../components/DestinationCard";
-import MainForm from "../components/MainForm";
-import NavBar from "../components/NavBar";
-import setInitialCardsNumber from "../helpers/setVisibleItemsByScreenWidth";
-import { DESTINATIONS as destinations } from "../config/destintaions";
-import H2 from "../components/H2";
-import Article from "../components/Article";
-import Footer from "../components/Footer";
+import useScreenSize from "@/shared/hooks/useScreenSize";
+import DestinationCard from "@/components/Destinations/DestinationCard";
+import MainForm from "@/components/SearchHotels/MainForm";
+import NavBar from "@/components/Navbar/NavBar";
+import setInitialCardsNumber from "@/components/Destinations/setVisibleItemsByScreenWidth";
+import { DESTINATIONS as destinations } from "@/components/Destinations/destintaions";
+import H2 from "@/shared/UI/H2";
+import Article from "@/components/Articles/Article";
+import Footer from "@/components/Footer/Footer";
 
 const MainPage = () => {
   const { width } = useScreenSize(); // получаем текущую ширину экрана
@@ -87,7 +87,7 @@ const MainPage = () => {
           </div>
         </div>
       </section>
-      <section className="mb-5">
+      <section className="mb-10">
         <div className="max-auto container w-full">
           <div className="mb-3">
             {/* <h2 className="text-center text-lg font-medium sm:text-left lg:text-xl">

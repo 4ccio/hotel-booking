@@ -1,23 +1,5 @@
-import logo from "../assets/logo.svg";
-import favoriteIcon from "../assets/favorite-icon.svg";
-import accountIcon from "../assets/account.svg";
-import burger from "../assets/burger.svg";
-
-const items = [
-  {
-    icon: favoriteIcon,
-    name: "Избранное",
-  },
-  {
-    icon: accountIcon,
-    name: "Войти",
-  },
-
-  {
-    icon: burger,
-    name: null,
-  },
-];
+import logo from "@/assets/logo.svg";
+import { items } from "./navItems";
 
 const NavBar = () => {
   return (
