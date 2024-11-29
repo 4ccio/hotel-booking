@@ -11,6 +11,31 @@ body {
 
 @layer components {
   .main-form-input {
-    @apply w-full rounded-lg border-2 border-zinc-700 bg-white/60 py-3 placeholder-zinc-700 backdrop-blur-sm focus:bg-white/75 focus:ring-0;
+    @apply w-full rounded-md border-2 border-zinc-700 bg-white/60 px-2 py-2.5 placeholder-zinc-700 backdrop-blur-sm focus:bg-white/75 focus:ring-0;
+  }
+  .tooltip {
+    @apply absolute left-0 z-10 w-max rounded-md text-sm shadow-md;
+  }
+  .tooltip::after {
+    content: "";
+    @apply absolute border-4 border-transparent;
+  }
+  .tooltip-bottom {
+    @apply top-full;
+  }
+  .tooltip-bottom::after {
+    @apply bottom-full left-[10px] translate-x-0;
+  }
+  .tooltip-dark {
+    @apply bg-black/80 text-white;
+  }
+  .tooltip-dark::after {
+    @apply border-b-black/80;
+  }
+  .tooltip-light {
+    @apply bg-white text-black;
+  }
+  .tooltip-light::after {
+    @apply border-b-white;
   }
 }

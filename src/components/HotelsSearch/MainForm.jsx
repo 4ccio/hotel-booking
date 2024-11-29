@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { formItems } from "./formItems";
 import { validateField, validationRules } from "./validation";
+import Tooltip from "../../shared/UI/Tooltip";
 
 const MainForm = () => {
   const [formData, setFormData] = useState({
@@ -97,10 +98,11 @@ const MainForm = () => {
                   className={`main-form-input ${errorVisible[id] && errors[id] ? "border-red-600/70 focus:border-red-600/80" : "focus:border-zinc-800"}`}
                   {...rest}
                 ></input>
+
                 {tooltipVisible[id] && errors[id] && (
-                  <div className="absolute -bottom-10 left-2 z-10 w-max rounded-md bg-black/80 p-2 text-sm text-white shadow-md">
+                  <Tooltip className="tooltip-bottom tooltip-light mt-1.5 px-2.5 py-2">
                     {errors[id]}
-                  </div>
+                  </Tooltip>
                 )}
               </div>
             </div>
