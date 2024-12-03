@@ -2,8 +2,11 @@ import { useState } from "react";
 import { formItems } from "./formItems";
 import { validateField, validationRules } from "./validation";
 import Tooltip from "@/shared/UI/Tooltip";
+import { useNavigate } from "react-router-dom";
 
 const MainForm = () => {
+  const navigate = useNavigate();
+
   const [formData, setFormData] = useState({
     destination: "",
     checkin: "",
@@ -74,6 +77,8 @@ const MainForm = () => {
         firstErrorField.focus();
         showTooltip(errorIds[0]);
       }
+    } else {
+      navigate("/search-result");
     }
   }
 
