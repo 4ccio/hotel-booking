@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { formItems } from "./formItems";
 import { validateField, validationRules } from "./validation";
-import Tooltip from "../../shared/UI/Tooltip";
+import Tooltip from "@/shared/UI/Tooltip";
 
 const MainForm = () => {
   const [formData, setFormData] = useState({
@@ -36,8 +36,7 @@ const MainForm = () => {
   function handleBlur(e) {
     const { id, value } = e.target;
     if (value.trim() !== "" || value.length > 0) {
-      const error = validateField(id, value);
-      console.log(error);
+      const error = validateField(id, value, formData);
       if (error) {
         setErrors((prevErrors) => ({ ...prevErrors, [id]: error }));
         showError(id);
@@ -59,7 +58,7 @@ const MainForm = () => {
     const newErrors = {};
     for (const field in validationRules) {
       const value = formData[field];
-      const error = validateField(field, value);
+      const error = validateField(field, value, formData);
       if (error) {
         newErrors[field] = error;
       }
@@ -100,7 +99,7 @@ const MainForm = () => {
                 ></input>
 
                 {tooltipVisible[id] && errors[id] && (
-                  <Tooltip className="tooltip-bottom tooltip-light mt-1.5 px-2.5 py-2">
+                  <Tooltip className="tooltip-bottom tooltip-dark mt-1.5 px-2.5 py-2 text-sm">
                     {errors[id]}
                   </Tooltip>
                 )}

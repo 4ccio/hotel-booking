@@ -15,7 +15,7 @@ export const validationRules = {
   },
   adults: (value) => {
     if (value.trim() === "") {
-      return "Число взрослых обязательно";
+      return "Укажите количество гостей";
     } else if (value <= 0) {
       return "Число взрослых должно быть больше 0";
     }
